@@ -1,4 +1,4 @@
-# A simple rule-validation API
+# A Simple rule-validation API
 The rule-validation API has just two routes.
 
 ### 1. First route is the base route. HTTP GET "/"

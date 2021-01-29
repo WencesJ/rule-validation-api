@@ -23,7 +23,6 @@ exports.validateRule = (req, res, next) => {
         return next(new AppError(error.msg, error.data));
     }
 
-    console.log(error, value);
     res.status(200).json({
         value
     })
