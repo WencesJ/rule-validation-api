@@ -1,7 +1,7 @@
 # A Simple rule-validation API
 The rule-validation API has just two routes.
 
-**References:**
+### References:
 
 #. _[FIRST ROUTE](https://github.com/WencesJ/rule-validation-api#1-first-route-is-the-base-route-http-get-)_
 
@@ -33,6 +33,7 @@ The rule-validation API has just two routes.
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ### 2. Second route is the rule validation route. HTTP POST "/validate-rule"
 **This route accepts JSON data containing a rule and data field to validate the rule against.**
@@ -54,6 +55,7 @@ Example:
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ### Endpoint requirements/constraints:
     a. The rule and data fields are required.
@@ -63,7 +65,7 @@ Example:
     e. The rule field value must be valid in the data field.
     f. The rule field can also support nested data object. 
         [PS: The nesting should not be more than two].
-
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ### Success Validation Response:
 **When the rule is successfully validated, the endpoint response (HTTP 200 status code) is:**
@@ -98,6 +100,7 @@ e.g.
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ### Failed Validation Response:
 **When the rule validation fails, the endpoint response (HTTP 400 status code) is:**
@@ -132,6 +135,8 @@ e.g.
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
+
 ### HOSTED ON
 [Heroku](http://heroku.com)
 
@@ -139,7 +144,7 @@ e.g.
 
     a. HTTP [GET] myflwsoln.herokuapp.com/
     b. HTTP [POST] myflwsoln.herokuapp.com/validate-rule
-
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ## OTHER EXAMPLES
 **Example JSON request payloads:**
@@ -181,6 +186,8 @@ Response: (HTTP 200)
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
+
 = EX2 =
 ```JSON
 Request:
@@ -208,6 +215,7 @@ Response: (HTTP 400)
     }
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 = EX3 =
 ```JSON
@@ -228,3 +236,4 @@ Response: (HTTP 400)
     "data": null
 }
 ```
+_[References](https://github.com/WencesJ/rule-validation-api#references)_
