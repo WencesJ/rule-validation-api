@@ -56,9 +56,9 @@ Example:
         "validation": {
             "error": false,
             "field": "[name of field]",
-            "field_value": [value of field],
+            "field_value": "[value of field]",
             "condition": "[rule condition]",
-            "condition_value: [condition value]
+            "condition_value": "[condition value]"
         }
     }
 }
@@ -74,7 +74,7 @@ e.g.
             "field": "missions",
             "field_value": 30,
             "condition": "gte",
-            "condition_value: 30
+            "condition_value": 30
         }
     }
 }
@@ -87,11 +87,11 @@ e.g.
     "status": "error",
     "data": {
         "validation": {
-            "error": false,
+            "error": true,
             "field": "[name of field]",
-            "field_value": [value of field],
+            "field_value": "[value of field]",
             "condition": "[rule condition]",
-            "condition_value: [condition value]
+            "condition_value": "[condition value]"
         }
     }
 }
@@ -107,7 +107,7 @@ e.g.
             "field": "missions",
             "field_value": 30,
             "condition": "gte",
-            "condition_value: 54
+            "condition_value": 54
         }
     }
 }
@@ -139,9 +139,9 @@ Request:
         "age": 34,
         "position": "Captain",
         "missions": {
-            count: 45,
-            successful: 44,
-            failed: 1
+            "count": 45,
+            "successful": 44,
+            "failed": 1
         }
     }
 }
@@ -156,7 +156,7 @@ Response: (HTTP 200)
             "field": "missions.count",
             "field_value": 45,
             "condition": "gte",
-            "condition_value: 30
+            "condition_value": 30
         }
     }
 }
@@ -166,7 +166,7 @@ Response: (HTTP 200)
 Request:
 {
     "rule": {
-        "field": "0"
+        "field": "0",
         "condition": "eq",
         "condition_value": "a"
     },
@@ -183,7 +183,7 @@ Response: (HTTP 400)
             "field": "0",
             "field_value": "d",
             "condition": "eq",
-            "condition_value: "a"
+            "condition_value": "a"
         }
     }
 }
@@ -194,7 +194,7 @@ Response: (HTTP 400)
 Request:
 {
     "rule": {
-        "field": "5"
+        "field": "5",
         "condition": "contains",
         "condition_value": "rocinante"
     },
@@ -203,7 +203,7 @@ Request:
 
 Response: (HTTP 400)
 {
-    "message": "field 5 is missing from data."
+    "message": "field 5 is missing from data.",
     "status": "error",
     "data": null
 }
