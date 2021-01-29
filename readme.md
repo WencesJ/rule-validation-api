@@ -5,7 +5,7 @@ The rule-validation API has just two routes.
 **It returns my profile data in the following format:**
 ```JSON
 {
-    "message": "My Rule-Validation API"
+    "message": "My Rule-Validation API",
     "status": "success",
     "data": {
         "name": "Wenceslas Emmanuel Jonah",
@@ -23,7 +23,7 @@ Example:
 ```JSON
 {
     "rule": {
-        "field": "missions"
+        "field": "missions",
         "condition": "gte",
         "condition_value": 30
     },
@@ -37,20 +37,20 @@ Example:
 }
 ```
 
-#####   Endpoint requirements/constraints:
-a. The rule and data fields are required.
-b. The rule field must be a valid JSON Object.
-c. The data field can be a|an valid Object|Array|String.
-d. The rule fields must contain (field, condition, condition_value).
-e. The rule field value must be valid in the data field.
-f. The rule field can also support nested data object. 
-    [PS: The nesting should not be more than two].
+#### Endpoint requirements/constraints:
+    a. The rule and data fields are required.
+    b. The rule field must be a valid JSON Object.
+    c. The data field can be a|an valid Object|Array|String.
+    d. The rule fields must contain (field, condition, condition_value).
+    e. The rule field value must be valid in the data field.
+    f. The rule field can also support nested data object. 
+        [PS: The nesting should not be more than two].
 
 
 **When the rule is successfully validated, the endpoint response (HTTP 200 status code) is:**
 ```JSON
 {
-    "message": "field [name of field] successfully validated."
+    "message": "field [name of field] successfully validated.",
     "status": "success",
     "data": {
         "validation": {
@@ -66,7 +66,7 @@ f. The rule field can also support nested data object.
 e.g.
 ```JSON
 {
-    "message": "field missions successfully validated."
+    "message": "field missions successfully validated.",
     "status": "success",
     "data": {
         "validation": {
@@ -83,7 +83,7 @@ e.g.
 **When the rule validation fails, the endpoint response (HTTP 400 status code) is:**
 ```JSON
 {
-    "message": "field [name of field] failed validation."
+    "message": "field [name of field] failed validation.",
     "status": "error",
     "data": {
         "validation": {
@@ -99,7 +99,7 @@ e.g.
 e.g.
 ```JSON
 {
-    "message": "field missions failed validation."
+    "message": "field missions failed validation.",
     "status": "error",
     "data": {
         "validation": {
@@ -123,11 +123,13 @@ e.g.
 
 ##### OTHER EXAMPLES
 **Example JSON request payloads:**
+
 = EX1 =
 ```JSON
+Request:
 {
     "rule": {
-        "field": "missions.count"
+        "field": "missions.count",
         "condition": "gte",
         "condition_value": 30
     },
@@ -146,7 +148,7 @@ e.g.
 
 Response: (HTTP 200)
 {
-    "message": "field missions.count successfully validated."
+    "message": "field missions.count successfully validated.",
     "status": "success",
     "data": {
         "validation": {
@@ -161,6 +163,7 @@ Response: (HTTP 200)
 ```
 = EX2 =
 ```JSON
+Request:
 {
     "rule": {
         "field": "0"
@@ -172,7 +175,7 @@ Response: (HTTP 200)
 
 Response: (HTTP 400)
 {
-    "message": "field 0 failed validation."
+    "message": "field 0 failed validation.",
     "status": "error",
     "data": {
         "validation": {
@@ -188,6 +191,7 @@ Response: (HTTP 400)
 
 = EX3 =
 ```JSON
+Request:
 {
     "rule": {
         "field": "5"
