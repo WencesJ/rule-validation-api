@@ -1,6 +1,7 @@
 const _ = require('lodash');
 
-const _isObject = (value) => (Object.prototype.toString.call(value) === '[object Object]');
+// CHECK THE TYPE OF VALUE PARAMS
+const _checkType = (value, type) => (Object.prototype.toString.call(value).includes(type));
 
 // CHECK JSON PAYLOAD - FIRST LEVEL VALIDATION.
 function checkJSONPayload(payload) {
@@ -10,7 +11,7 @@ function checkJSONPayload(payload) {
      * checks if payload contains more than the required fields.
     */
    
-    if (!(_isObject(payload)) || !(Object.keys(payload).length <= 2)) {
+    if (!(_checkType(payload, 'Object')) || !(Object.keys(payload).length <= 2)) {
         
         // returns error - object.
         return {
@@ -58,7 +59,7 @@ function checkValidJSONFields(payload) {
     const { rule, data } = payload;
 
     // checks if rule value is not an object.
-    if (!(_isObject(rule))) {
+    if (!(_checkType(rule, 'Object'))) {
 
         // returns error - object.  
         return {
@@ -70,7 +71,7 @@ function checkValidJSONFields(payload) {
     }
     
     // checks if data value is not a|an Object | Array | String.
-    if (!(_isObject(data)) && !(Array.isArray(data)) && (typeof data !== 'string')) {
+    if (!(_checkType(data, 'Object')) && !(_checkType(data, 'Array')) && !(_checkType(data, 'String'))) {
 
         // returns error - object.
         return {
@@ -113,6 +114,15 @@ function checkRequiredRuleFields(payload) {
             return {
                 error: {
                     msg: `rule.${field} is required.`,
+                    data: null
+                }
+            }
+        }
+
+        if (field == 'field' && !(_checkType(rule[field], 'String'))) {
+            return {
+                error: {
+                    msg: `rule.${field} must be a string.`,
                     data: null
                 }
             }
@@ -282,7 +292,7 @@ function executeValidateFns(fns, payload) {
 }
 
 exports.rule_validate = payload => {
-    
+
     const fns = [
         evaluate, 
         checkMissingDataField, 
