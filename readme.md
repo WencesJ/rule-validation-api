@@ -4,11 +4,17 @@ The rule-validation API has just two routes.
 **References:**
 
 #. _[FIRST ROUTE](https://github.com/WencesJ/rule-validation-api#1-first-route-is-the-base-route-http-get-)_
-#. _[SECOND ROUTE](http://heroku.com)_
-#. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](http://heroku.com)_
+
+#. _[SECOND ROUTE](https://github.com/WencesJ/rule-validation-api#2-second-route-is-the-rule-validation-route-http-post-validate-rule)_
+
+#. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](https://github.com/WencesJ/rule-validation-api#endpoint-requirementsconstraints)_
+
 #. _[SUCCESS VALIDATION RESPONSE](http://heroku.com)
+
 #. _[FAILED VALIDATION RESPONSE](http://heroku.com)_
+
 #. _[HOSTING](http://heroku.com)_
+
 #. _[OTHER EXAMPLES](http://heroku.com)_
 
 
@@ -59,6 +65,7 @@ Example:
         [PS: The nesting should not be more than two].
 
 
+### Success Validation Response:
 **When the rule is successfully validated, the endpoint response (HTTP 200 status code) is:**
 ```JSON
 {
@@ -92,6 +99,7 @@ e.g.
 }
 ```
 
+### Success Validation Response:
 **When the rule validation fails, the endpoint response (HTTP 400 status code) is:**
 ```JSON
 {
