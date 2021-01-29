@@ -142,9 +142,9 @@ _[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 **_Accessible Routes:_**
 
-[GET] __(https://wences-rule-validation-api.herokuapp.com/)__
+__[GET](https://wences-rule-validation-api.herokuapp.com/)__
 
-[POST] __(https://wences-rule-validation-api.herokuapp.com/validate-rule)__
+__[POST](https://wences-rule-validation-api.herokuapp.com/validate-rule)__
 
 _[References](https://github.com/WencesJ/rule-validation-api#references)_
 
