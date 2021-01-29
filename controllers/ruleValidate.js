@@ -7,7 +7,7 @@ exports.getMe = (req, res, next) => {
 
     res.status(200).json({
         message: "My Rule-Validation Api",
-        status: MSG.SUCCESS,
+        status: 'success',
         data: profile
     });
 
