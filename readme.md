@@ -9,13 +9,13 @@ The rule-validation API has just two routes.
 
 #. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](https://github.com/WencesJ/rule-validation-api#endpoint-requirementsconstraints)_
 
-#. _[SUCCESS VALIDATION RESPONSE](http://heroku.com)
+#. _[SUCCESS VALIDATION RESPONSE](https://github.com/WencesJ/rule-validation-api#success-validation-response)
 
-#. _[FAILED VALIDATION RESPONSE](http://heroku.com)_
+#. _[FAILED VALIDATION RESPONSE](https://github.com/WencesJ/rule-validation-api#failed-validation-response)_
 
-#. _[HOSTING](http://heroku.com)_
+#. _[HOSTING](https://github.com/WencesJ/rule-validation-api#hosted-on)_
 
-#. _[OTHER EXAMPLES](http://heroku.com)_
+#. _[OTHER EXAMPLES](https://github.com/WencesJ/rule-validation-api#other-examples)_
 
 
 ### 1. First route is the base route. HTTP GET "/"
@@ -99,7 +99,7 @@ e.g.
 }
 ```
 
-### Success Validation Response:
+### Failed Validation Response:
 **When the rule validation fails, the endpoint response (HTTP 400 status code) is:**
 ```JSON
 {
@@ -132,7 +132,7 @@ e.g.
     }
 }
 ```
-#### HOSTED ON
+### HOSTED ON
 [Heroku](http://heroku.com)
 
 **_Accessible Routes:_**
@@ -141,7 +141,7 @@ e.g.
     b. HTTP [POST] myflwsoln.herokuapp.com/validate-rule
 
 
-##### OTHER EXAMPLES
+## OTHER EXAMPLES
 **Example JSON request payloads:**
 
 = EX1 =
