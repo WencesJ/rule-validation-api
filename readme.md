@@ -138,12 +138,12 @@ e.g.
 _[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ### HOSTED ON
-[Heroku](http://heroku.com)
+[Heroku](https://wences-rule-validation-api.herokuapp.com)
 
 **_Accessible Routes:_**
 
-    a. HTTP [GET] myflwsoln.herokuapp.com/
-    b. HTTP [POST] myflwsoln.herokuapp.com/validate-rule
+    a. HTTP [GET] https://wences-rule-validation-api.herokuapp.com/
+    b. HTTP [POST] https://wences-rule-validation-api.herokuapp.com/validate-rule
 _[References](https://github.com/WencesJ/rule-validation-api#references)_
 
 ## OTHER EXAMPLES
