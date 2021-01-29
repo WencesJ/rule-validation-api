@@ -19,6 +19,7 @@ The rule-validation API has just two routes.
 
 ### 2. Second route is the rule validation route. HTTP POST "/validate-rule"
 **This route accepts JSON data containing a rule and data field to validate the rule against.**
+
 Example:
 ```JSON
 {
