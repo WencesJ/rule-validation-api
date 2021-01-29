@@ -19,7 +19,6 @@ app.use(express.json({ limit: '10kb' }));
 
 app.use('/', validateRouter);
 
-
 app.all('*', (req, res, next) => {
     next(new AppError(`Cannot find ${req.originalUrl} on this server`, 400));
 });

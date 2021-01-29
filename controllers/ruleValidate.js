@@ -5,7 +5,7 @@ const AppError = require('./../Error/AppError');
 // GET ME
 exports.getMe = (req, res, next) => {
 
-    res.status(STATUS.OK).json({
+    res.status(200).json({
         message: "My Rule-Validation Api",
         status: MSG.SUCCESS,
         data: profile
