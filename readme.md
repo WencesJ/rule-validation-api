@@ -1,6 +1,17 @@
 # A Simple rule-validation API
 The rule-validation API has just two routes.
 
+**References:**
+
+    #. _[FIRST ROUTE](http://heroku.com)_
+    #. _[SECOND ROUTE](http://heroku.com)_
+    #. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](http://heroku.com)_
+    #. _[SUCCESS VALIDATION RESPONSE](http://heroku.com)
+    #. _[FAILED VALIDATION RESPONSE](http://heroku.com)_
+    #. _[HOSTING](http://heroku.com)_
+    #. _[OTHER EXAMPLES](http://heroku.com)_
+
+
 ### 1. First route is the base route. HTTP GET "/"
 **It returns my profile data in the following format:**
 ```JSON
@@ -38,7 +49,7 @@ Example:
 }
 ```
 
-#### Endpoint requirements/constraints:
+### Endpoint requirements/constraints:
     a. The rule and data fields are required.
     b. The rule field must be a valid JSON Object.
     c. The data field can be a|an valid Object|Array|String.
