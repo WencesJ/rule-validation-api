@@ -3,13 +3,13 @@ The rule-validation API has just two routes.
 
 **References:**
 
-    #. _[FIRST ROUTE](http://heroku.com)_
-    #. _[SECOND ROUTE](http://heroku.com)_
-    #. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](http://heroku.com)_
-    #. _[SUCCESS VALIDATION RESPONSE](http://heroku.com)
-    #. _[FAILED VALIDATION RESPONSE](http://heroku.com)_
-    #. _[HOSTING](http://heroku.com)_
-    #. _[OTHER EXAMPLES](http://heroku.com)_
+#. _[FIRST ROUTE](https://github.com/WencesJ/rule-validation-api#1-first-route-is-the-base-route-http-get-)_
+#. _[SECOND ROUTE](http://heroku.com)_
+#. _[ENDPOINTS REQUIREMENT/CONSTRAINTS](http://heroku.com)_
+#. _[SUCCESS VALIDATION RESPONSE](http://heroku.com)
+#. _[FAILED VALIDATION RESPONSE](http://heroku.com)_
+#. _[HOSTING](http://heroku.com)_
+#. _[OTHER EXAMPLES](http://heroku.com)_
 
 
 ### 1. First route is the base route. HTTP GET "/"
