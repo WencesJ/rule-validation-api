@@ -10,8 +10,6 @@ exports.getMe = (req, res, next) => {
         status: 'success',
         data: profile
     });
-
-    next();
 };
 
 // VALIDATE RULE

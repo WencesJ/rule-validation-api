@@ -155,10 +155,8 @@ function checkMissingDataField(payload) {
     let mainData, dataKey;
 
     // checks if the rule field is nested.
-    if (field.includes('.')) {
+    if (field.includes('.') && !field.startsWith('.') && !field.endsWith('.')) {
         let dataKeys = field.split('.');
-
-        let currentFieldName = dataKeys[0];
 
         let nextObj = { ...data };
 
@@ -174,23 +172,17 @@ function checkMissingDataField(payload) {
             }
         }
 
-        // checks if each key of a nested field exists.
-        for (key of dataKeys) {
-            if (_.get(nextObj, currentFieldName) === undefined) {
+        if (_.get(nextObj, field) === undefined) {
 
-                // returns error - object.
-                return {
-                    error: {
-                        msg: `field ${key} is missing from (data.${currentFieldName}).`,
-                        data: null
-                    }
+            // returns error - object.
+            return {
+                error: {
+                    msg: `field ${field} is missing from data.`,
+                    data: null
                 }
             }
-            if (key === currentFieldName) continue;
-
-            currentFieldName += `.${key}`;
         }
-
+        
         dataKey = dataKeys.pop();
         mainData = _.get(nextObj, dataKeys.join('.'));
 
@@ -291,6 +283,7 @@ function executeValidateFns(fns, payload) {
     return executeValidateFns(fns, value);
 }
 
+// EXPORTS
 exports.rule_validate = payload => {
 
     const fns = [
