@@ -185,7 +185,6 @@ function checkMissingDataField(payload) {
         
         dataKey = dataKeys.pop();
         mainData = _.get(nextObj, dataKeys.join('.'));
-
     }
     else {
 
@@ -222,11 +221,11 @@ function evaluate(payload) {
 
     // string expressions of the rule evaluation.
     const conditions = {
-        eq: "mainData[dataKey] == rule.condition_value",
-        neq: "mainData[dataKey] != rule.condition_value",
-        gt: "mainData[dataKey] > rule.condition_value",
-        gte: "mainData[dataKey] >= rule.condition_value",
-        contains: "mainData[dataKey].includes(rule.condition_value)",
+        eq: "==",
+        neq: "!=",
+        gt: ">",
+        gte: ">=",
+        contains: "==",
     }
 
     // validation object to be returned.
@@ -238,7 +237,7 @@ function evaluate(payload) {
     }
 
     // execution of the valid string expression.
-    if (!eval(conditions[rule.condition])) {
+    if (!eval(`mainData[dataKey] ${conditions[rule.condition]} rule.condition_value`)) {
 
         // returns error - error validation fields - object.
         return {
